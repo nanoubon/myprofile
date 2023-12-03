@@ -17,8 +17,8 @@ function Avatar() {
                         <div className=" items-end text-center gap-x-10">
                             <img className="h-50 w-50 rounded-full img" src={person.imageUrl} alt="" />
                             <div className="pt-5">
-                                <h2 className="font-semibold text-4xl leading-7 tracking-tight text-gray-900">{person.name}</h2>
-                                <h3 className="font-semibold text-2xl pt-5 leading-6 text-indigo-600">{person.role}</h3>
+                                <h2 className="font-semibold text-4xl leading-7 tracking-tight text-gray-900 mobile:text-2xl">{person.name}</h2>
+                                <h3 className="font-semibold text-2xl pt-5 leading-6 text-indigo-600 mobile:text-xl">{person.role}</h3>
                             </div>
                         </div>
                     </li>
