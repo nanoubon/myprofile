@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <div className="gradient_bg">
-        <div className=" container p-20 md:py-10 px-10 m-0">
+        <div className=" container p-20 md:py-10 px-10">
           <div className="pb-10">
             <Avatar />
           </div>

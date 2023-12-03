@@ -11,20 +11,20 @@ const people = [
 function Avatar() {
     return (
         <div>
-                <ul role="list" className="p-1">
-                    {people.map((person) => (
-                        <li key={person.name}>
-                            <div className="flex items-center gap-x-10 ">
-                                <img className="h-50 w-50 rounded-full" src={person.imageUrl} alt="" />
-                                <div>
-                                    <h2 className="font-semibold text-4xl leading-7 tracking-tight text-gray-900">{person.name}</h2>
-                                    <h3 className="font-semibold text-2xl pt-5 leading-6 text-indigo-600">{person.role}</h3>
-                                </div>
+            <ul role="list" className="p-1">
+                {people.map((person) => (
+                    <li key={person.name}>
+                        <div className=" items-end text-center gap-x-10">
+                            <img className="h-50 w-50 rounded-full img" src={person.imageUrl} alt="" />
+                            <div className="pt-5">
+                                <h2 className="font-semibold text-4xl leading-7 tracking-tight text-gray-900">{person.name}</h2>
+                                <h3 className="font-semibold text-2xl pt-5 leading-6 text-indigo-600">{person.role}</h3>
                             </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
     )
 }
 export default Avatar;
