@@ -1,5 +1,5 @@
 
-import { Timeline } from 'flowbite-react';
+// import { Timeline } from 'flowbite-react';
 
 const jobs_name = [
     {
