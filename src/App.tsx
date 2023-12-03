@@ -1,14 +1,19 @@
-import './App.css'
+import "./App.css";
+import "./index.css";
+import Avatar from "./components/Avatar";
+import Personal from "./components/Personal";
 
 function App() {
-
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className="gradient_bg">
+      <div className=" container">
+      <div> <Avatar/></div>
+      <div> <Personal/></div>
+      </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
