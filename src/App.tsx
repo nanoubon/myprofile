@@ -7,9 +7,9 @@ import Timeline from "./components/Timeline";
 function App() {
   return (
     <>
-      <div className="gradient_bg md:p-5">
-        <div className=" container">
-          <div>
+      <div className="gradient_bg">
+        <div className=" container p-20 md:py-10 px-10 m-0">
+          <div className="pb-10">
             <Avatar />
           </div>
           <div className="pb-5">

@@ -10,7 +10,7 @@ const people = [
 
 function Avatar() {
     return (
-        <div className="py-10 gap-5 sm:py-20 pr-10">
+        <div>
                 <ul role="list" className="p-1">
                     {people.map((person) => (
                         <li key={person.name}>
