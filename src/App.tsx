@@ -7,18 +7,15 @@ import Timeline from "./components/Timeline";
 function App() {
   return (
     <>
-      <div className="gradient_bg">
+      <div className="gradient_bg md:p-5">
         <div className=" container">
           <div>
-            
             <Avatar />
           </div>
-          <div>
-            
+          <div className="pb-5">
             <Personal />
           </div>
           <div>
-            
             <Timeline />
           </div>
         </div>

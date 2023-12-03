@@ -1,5 +1,5 @@
 body {
-  font-family:"Sukhumvit Set";
+  font-family:Sukhumvit Set,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-style: normal;
   font-weight: 400;
@@ -52,6 +52,4 @@ body {
   font-weight: bold;
   text-align: center;
 }
-.TimeLine {
-  text-align: justify-all;
-}
+

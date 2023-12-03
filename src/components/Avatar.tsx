@@ -10,11 +10,11 @@ const people = [
 
 function Avatar() {
     return (
-        <div className="py-10 gap-5 sm:py-20">
+        <div className="py-10 gap-5 sm:py-20 pr-10">
                 <ul role="list" className="p-1">
                     {people.map((person) => (
                         <li key={person.name}>
-                            <div className="flex items-center gap-x-10">
+                            <div className="flex items-center gap-x-10 ">
                                 <img className="h-50 w-50 rounded-full" src={person.imageUrl} alt="" />
                                 <div>
                                     <h2 className="font-semibold text-4xl leading-7 tracking-tight text-gray-900">{person.name}</h2>

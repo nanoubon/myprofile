@@ -8,7 +8,7 @@ const jobs_name = [
             "Rolled out Desktop PCs and Laptop as needed." +
             "Responsible for determining software and hardware resolutions" +
             "Work as primary support analyst for company.",
-        posstion: "Software Engineer",
+        position: "Software Engineer",
         year: "2023 – Present",
     },
     {
@@ -22,7 +22,7 @@ const jobs_name = [
             " problem-solve and maximize productivity. Reputation as a resourceful team player" +
             " working with integrity and professionalism to earn respect, inspire cooperation " +
             "and exceed business expectations.",
-        posstion: "Network Engineer and Acting IT Manager ",
+            position: "Network Engineer and Acting IT Manager ",
         year: "2015 – 2022",
     },
     {
@@ -34,7 +34,7 @@ const jobs_name = [
             "Rolled out Desktop PCs and Laptop as needed." +
             "Responsible for determining software and hardware resolutions" +
             "Work as primary support analyst for company.",
-        posstion: "IT Support",
+            position: "IT Support",
         year: "2015",
     },
 ];
@@ -47,15 +47,15 @@ function Timeline() {
                     {jobs_name.map((job,index) =>(
                     <li key={index} className="mb-10 ml-4">
                         <div className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                        <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                        <time className="mb-1 text-xl font-semibold leading-none text-gray-100 dark:text-gray-500">
                             {job.year}
                         </time>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                             {job.name}
                             <br/>
-                            {job.posstion}
+                            {job.position}
                         </h3>
-                        <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+                        <p className="mb-4 text-base font-normal text-gray-100 dark:text-gray-400">
                             {job.jobdetail}
                         </p>
                         <a
