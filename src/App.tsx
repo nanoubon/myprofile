@@ -9,7 +9,6 @@ function App() {
     <>
       <div className="gradient_bg">
         <div className=" container p-20 md:py-10 px-10">
-          <h1>TEST</h1>
           <div className="pb-10">
             <Avatar />
           </div>
