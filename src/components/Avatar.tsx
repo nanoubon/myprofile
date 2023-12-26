@@ -4,7 +4,7 @@ const people = [
         name: 'Pranchai Himakoon',
         role: 'Software Engineer',
         imageUrl:
-            'https://scontent.fbkk6-2.fna.fbcdn.net/v/t39.30808-6/296985391_5561488343901767_5053993872469654679_n.jpg?stp=cp6_dst-jpg_p206x206&_nc_cat=107&ccb=1-7&_nc_sid=3d9721&_nc_eui2=AeFCbn_3QNWz3PlFVXOOz18zzy8NTKZHsWrPLw1MpkexaqChi6IYztJyqbIZrpq49RfdeAr1KpJXD0PTA2ohTctB&_nc_ohc=V5aoV5zUKA8AX_p3AO7&_nc_ht=scontent.fbkk6-2.fna&oh=00_AfBS9Jug2epsN_8bppFu63WOGx51WeUoFF914Lcpq1mR3w&oe=656F1474',
+            'https://cdn.pixabay.com/photo/2017/03/23/09/34/artificial-intelligence-2167835_1280.jpg',
     },
 ]
 
