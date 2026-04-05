@@ -1,26 +1,22 @@
 import "./App.css";
-import "./index.css";
 import Avatar from "./components/Avatar";
 import Personal from "./components/Personal";
 import Timeline from "./components/Timeline";
+import Projects from "./components/Projects";
 
 function App() {
   return (
-    <>
-      <div className="gradient_bg">
-        <div className=" container p-20 md:py-10 px-10">
-          <div className="pb-10">
-            <Avatar />
-          </div>
-          <div className="pb-5">
-            <Personal />
-          </div>
-          <div>
-            <Timeline />
-          </div>
-        </div>
+    <div className="site-wrapper">
+      <div className="container-main">
+        <Avatar />
+        <Personal />
+        <Timeline />
+        <Projects />
+        <footer className="site-footer">
+          <p className="footer-text">Pranchai Himakoon &nbsp;·&nbsp; {new Date().getFullYear()}</p>
+        </footer>
       </div>
-    </>
+    </div>
   );
 }
 

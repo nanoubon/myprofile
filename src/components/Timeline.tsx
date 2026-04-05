@@ -1,88 +1,75 @@
-const jobs_name = [
-    {
-        name: "Stream I.T. Consulting Ltd., Bangkok Province.",
-        jobdetail:
-            "Installed and performed maintenance on domain controller, active directory," +
-            "finger scan and Internet server by mail server SMTP, POP3 and CCTV." +
-            "Installed and Designed LAN, WIFI network." +
-            "Rolled out Desktop PCs and Laptop as needed." +
-            "Responsible for determining software and hardware resolutions" +
-            "Work as primary support analyst for company.",
-        position: "Software Engineer",
-        year: "2023 – Present",
-    },
-    {
-        name: "Thai Rotary Engineering Public Company Limited, Rayong Province.",
-        jobdetail:
-            "Dedicated, reliable IT project leader with excellent interpersonal " +
-            "skills who builds and maintain strong alliance to motivate teams and drive projects" +
-            " to successful completion. Strong communication abilities with extensive experience " +
-            "writing reports crucial to project safety and operations. Experience working with " +
-            "a variety of technical equipment with the in-depth knowledge required to troubleshoot," +
-            " problem-solve and maximize productivity. Reputation as a resourceful team player" +
-            " working with integrity and professionalism to earn respect, inspire cooperation " +
-            "and exceed business expectations.",
-            position: "Network Engineer and Acting IT Manager ",
-        year: "2015 – 2022",
-    },
-    {
-        name: "GOLDEN CITY RAYONG HOTEL, Rayong Province.",
-        jobdetail:
-            "Installed and performed maintenance on domain controller, active directory," +
-            "finger scan and Internet server by mail server SMTP, POP3 and CCTV." +
-            "Installed and Designed LAN, WIFI network." +
-            "Rolled out Desktop PCs and Laptop as needed." +
-            "Responsible for determining software and hardware resolutions" +
-            "Work as primary support analyst for company.",
-            position: "IT Support",
-        year: "2015",
-    },
-];
+const jobs = [
+  {
+    company: 'Stream I.T. Consulting Ltd.',
+    location: 'Bangkok',
+    position: 'Software Engineer',
+    year: 'Feb 2023 – Present',
+    highlights: [
+      'Designed and implemented web applications using React, Next.js, Python, Flutter and C# .NET Core (API & Razor Pages)',
+      'Developed responsive UIs with HTML5, Bootstrap, and Tailwind CSS with mobile-first approach',
+      'Built and managed CI/CD pipelines using GitLab and GitLab Runner for automated workflows',
+      'Containerized applications and microservices with Docker for consistent deployments',
+      'Integrated SonarQube for static code analysis and technical debt tracking',
+      'Created dynamic business reports using RDL (Report Definition Language)',
+      'Collaborated in cross-functional Agile teams to resolve technical issues and reduce latency',
+    ],
+  },
+  {
+    company: 'Thai Rotary Engineering PCL.',
+    location: 'Rayong',
+    position: 'Network Engineer & Acting IT Manager',
+    year: '2015 – 2022',
+    highlights: [
+      'Led IT project planning and development for network, server, and application infrastructure',
+      'Analyzed user requirements, designed and developed in-house business applications',
+      'Installed, designed, and improved company network including firewall configuration and security monitoring',
+      'Managed server operations (AD, DHCP, DNS), data security, and backup/recovery systems',
+      'Managed user access rights and implemented security policies to prevent unauthorized access',
+      'Coordinated database and information security prevention and resolution plans',
+      'Continuously updated technical knowledge through training and self-study',
+    ],
+  },
+  {
+    company: 'Golden City Rayong Hotel',
+    location: 'Rayong',
+    position: 'IT Support',
+    year: '2015',
+    highlights: [
+      'Maintained domain controller, Active Directory, and biometric systems',
+      'Managed Internet server (SMTP, POP3) and CCTV infrastructure',
+      'Designed and installed LAN/WIFI networks',
+      'Rolled out end-user devices and resolved hardware/software issues',
+    ],
+  },
+]
 
 function Timeline() {
-    return (
-        <div>
-            <div className="p-0">
-                <ol className="relative border-l border-gray-200 dark:border-gray-700">
-                    {jobs_name.map((job,index) =>(
-                    <li key={index} className="mb-10 ml-4">
-                        <div className="absolute w-3 h-3 bg-gray-200 rounded-full -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                        <time className="mb-1 text-xl font-semibold leading-none text-gray-100 dark:text-gray-500">
-                            {job.year}
-                        </time>
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            {job.name}
-                            <br/>
-                            {job.position}
-                        </h3>
-                        <p className="mb-4 text-base font-normal text-gray-100 dark:text-gray-400">
-                            {job.jobdetail}
-                        </p>
-                        <a
-                            href="#"
-                            className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                        >
-                            Learn more{" "}
-                            <svg
-                                className="w-3 h-3 ml-2"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    fill-rule="evenodd"
-                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
-                                ></path>
-                            </svg>
-                        </a>
-                    </li>
-                    ))}
-                </ol>
-
-            </div>
-        </div>
-    );
+  return (
+    <section className="section">
+      <p className="section-label">05 — Career</p>
+      <h2 className="section-title">Work Experience</h2>
+      <div className="timeline">
+        {jobs.map((job, index) => (
+          <div key={index} className="timeline-item">
+            <div className="timeline-dot" />
+            <p className="timeline-year">{job.year}</p>
+            <h3 className="timeline-company">
+              {job.company}&nbsp;
+              <span style={{ color: 'rgba(255,255,255,0.25)', fontWeight: 400, fontSize: '0.85rem', textTransform: 'none', letterSpacing: 0 }}>
+                — {job.location}
+              </span>
+            </h3>
+            <p className="timeline-position">{job.position}</p>
+            <ul className="timeline-highlights">
+              {job.highlights.map((h, i) => (
+                <li key={i}>{h}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
 }
 
-export default Timeline;
+export default Timeline
