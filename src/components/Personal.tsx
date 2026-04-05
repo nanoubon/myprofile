@@ -47,20 +47,20 @@ const skillGroups = [
 
 function Personal() {
   return (
-    <section className="section">
+    <section className="section-3d">
       {/* Summary */}
       <p className="section-label">01 — Profile</p>
       <h2 className="section-title">Summary</h2>
-      <div className="summary-list">
+      <div className="summary-glass glass">
         {summary.map((s, i) => (
-          <p key={i} className="about-text">{s}</p>
+          <p key={i} className="summary-text">{s}</p>
         ))}
       </div>
 
       {/* Education */}
       <div className="subsection">
         <p className="section-label">02 — Education</p>
-        <div className="edu-card">
+        <div className="edu-glass glass">
           <h3 className="edu-school">{education.school}</h3>
           <p className="edu-detail">
             {education.degree} <span className="edu-meta">· GPA {education.gpa} · {education.year}</span>
@@ -73,11 +73,11 @@ function Personal() {
         <p className="section-label">03 — Skills &amp; Technologies</p>
         <div className="skill-groups">
           {skillGroups.map((group) => (
-            <div key={group.category} className="skill-group">
+            <div key={group.category} className="skill-group-glass glass">
               <h4 className="skill-group-label">{group.category}</h4>
               <div className="skills-grid">
                 {group.items.map((skill) => (
-                  <span key={skill} className="skill-tag">{skill}</span>
+                  <span key={skill} className="skill-tag-3d">{skill}</span>
                 ))}
               </div>
             </div>

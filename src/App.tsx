@@ -6,7 +6,17 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <div className="site-wrapper">
+    <div className="scene">
+      {/* 3D Background Orbs */}
+      <div className="bg-orbs">
+        <div className="orb orb-1" />
+        <div className="orb orb-2" />
+        <div className="orb orb-3" />
+        <div className="orb orb-4" />
+      </div>
+      <div className="bg-grid" />
+
+      {/* Content */}
       <div className="container-main">
         <Avatar />
         <Personal />

@@ -28,18 +28,18 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="section">
+    <section className="section-3d">
       <p className="section-label">06 — Portfolio</p>
       <h2 className="section-title">Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <div className="project-header">
+          <div key={index} className="project-card-3d">
+            <div className="project-card-inner glass">
               <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
               <h3 className="project-name">{project.name}</h3>
+              <p className="project-client">{project.client}</p>
+              <p className="project-desc">{project.description}</p>
             </div>
-            <p className="project-client">{project.client}</p>
-            <p className="project-desc">{project.description}</p>
           </div>
         ))}
       </div>
