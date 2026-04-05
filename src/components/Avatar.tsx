@@ -5,8 +5,7 @@ const person = {
   phone: '065-4956198',
   email: 'programmer_ubon@hotmail.com',
   tags: ['React', 'Next.js', 'Python', 'C# .NET Core', 'Docker', 'CI/CD'],
-  imageUrl:
-    'https://cdn.pixabay.com/photo/2017/03/23/09/34/artificial-intelligence-2167835_1280.jpg',
+  imageUrl: '/myprofile/Picture1.jpg',
   personalData: [
     { label: 'Nationality', value: 'Thai' },
     { label: 'Status', value: 'Married' },
