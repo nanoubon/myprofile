@@ -18,33 +18,33 @@ function Avatar() {
     <section className="hero">
       <div className="hero-glass glass">
         <div className="hero-layout">
-          <div className="hero-avatar-wrap">
+          <div className="hero-avatar-wrap hero-enter">
             <div className="hero-avatar">
               <img src={person.imageUrl} alt={`${person.firstName} ${person.lastName}`} />
             </div>
           </div>
           <div className="hero-text">
-            <p className="hero-tag">Available for opportunities</p>
-            <h1 className="hero-name">
+            <p className="hero-tag hero-enter hero-enter-delay-1">Available for opportunities</p>
+            <h1 className="hero-name hero-enter hero-enter-delay-2">
               {person.firstName}<br />
               <span className="accent">{person.lastName}</span>
             </h1>
-            <p className="hero-role">
-              <span className="caret">&#9646;</span> {person.role}
+            <p className="hero-role hero-enter hero-enter-delay-3">
+              <span className="caret" aria-hidden="true">&#9646;</span> {person.role}
             </p>
-            <div className="hero-contact">
+            <div className="hero-contact hero-enter hero-enter-delay-4">
               <a href={`tel:${person.phone}`} className="contact-link">{person.phone}</a>
-              <span className="contact-sep">|</span>
+              <span className="contact-sep" aria-hidden="true">|</span>
               <a href={`mailto:${person.email}`} className="contact-link">{person.email}</a>
             </div>
-            <div className="hero-badges">
+            <div className="hero-badges hero-enter hero-enter-delay-5">
               {person.tags.map((tag) => (
                 <span key={tag} className="badge-3d">{tag}</span>
               ))}
             </div>
           </div>
         </div>
-        <div className="personal-data-row">
+        <div className="personal-data-row hero-enter hero-enter-delay-5">
           {person.personalData.map((d) => (
             <div key={d.label} className="personal-data-item">
               <span className="pd-label">{d.label}</span>

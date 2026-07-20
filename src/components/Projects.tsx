@@ -29,11 +29,17 @@ const projects = [
 function Projects() {
   return (
     <section className="section-3d">
-      <p className="section-label">06 — Portfolio</p>
-      <h2 className="section-title">Projects</h2>
+      <div data-reveal>
+        <p className="section-label">06 — Portfolio</p>
+        <h2 className="section-title">Projects</h2>
+      </div>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <div key={index} className="project-card-3d">
+          <div
+            key={index}
+            className={`project-card-3d delay-${Math.min(index + 1, 5)}`}
+            data-reveal="scale"
+          >
             <div className="project-card-inner glass">
               <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
               <h3 className="project-name">{project.name}</h3>

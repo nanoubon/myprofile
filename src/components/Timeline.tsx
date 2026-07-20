@@ -75,11 +75,17 @@ const jobs = [
 function Timeline() {
   return (
     <section className="section-3d">
-      <p className="section-label">05 — Career</p>
-      <h2 className="section-title">Work Experience</h2>
+      <div data-reveal>
+        <p className="section-label">05 — Career</p>
+        <h2 className="section-title">Work Experience</h2>
+      </div>
       <div className="timeline">
         {jobs.map((job, index) => (
-          <div key={index} className="timeline-card">
+          <div
+            key={index}
+            className={`timeline-card delay-${Math.min(index + 1, 5)}`}
+            data-reveal="left"
+          >
             <div className="timeline-dot" />
             <div className="timeline-card-inner glass">
               <p className="timeline-year">{job.year}</p>

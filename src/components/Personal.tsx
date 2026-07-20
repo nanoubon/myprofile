@@ -48,32 +48,38 @@ const skillGroups = [
 function Personal() {
   return (
     <section className="section-3d">
-      {/* Summary */}
-      <p className="section-label">01 — Profile</p>
-      <h2 className="section-title">Summary</h2>
-      <div className="summary-glass glass">
-        {summary.map((s, i) => (
-          <p key={i} className="summary-text">{s}</p>
-        ))}
+      <div data-reveal>
+        <p className="section-label">01 — Profile</p>
+        <h2 className="section-title">Summary</h2>
+        <div className="summary-glass glass">
+          {summary.map((s, i) => (
+            <p key={i} className="summary-text">{s}</p>
+          ))}
+        </div>
       </div>
 
-      {/* Education */}
-      <div className="subsection">
+      <div className="subsection" data-reveal>
         <p className="section-label">02 — Education</p>
         <div className="edu-glass glass">
           <h3 className="edu-school">{education.school}</h3>
           <p className="edu-detail">
-            {education.degree} <span className="edu-meta">· GPA {education.gpa} · {education.year}</span>
+            {education.degree}{' '}
+            <span className="edu-meta">· GPA {education.gpa} · {education.year}</span>
           </p>
         </div>
       </div>
 
-      {/* Skills */}
       <div className="subsection">
-        <p className="section-label">03 — Skills &amp; Technologies</p>
+        <div data-reveal>
+          <p className="section-label">03 — Skills &amp; Technologies</p>
+        </div>
         <div className="skill-groups">
-          {skillGroups.map((group) => (
-            <div key={group.category} className="skill-group-glass glass">
+          {skillGroups.map((group, gi) => (
+            <div
+              key={group.category}
+              className={`skill-group-glass glass delay-${Math.min(gi + 1, 5)}`}
+              data-reveal="scale"
+            >
               <h4 className="skill-group-label">{group.category}</h4>
               <div className="skills-grid">
                 {group.items.map((skill) => (
@@ -85,8 +91,7 @@ function Personal() {
         </div>
       </div>
 
-      {/* Training */}
-      <div className="subsection">
+      <div className="subsection" data-reveal>
         <p className="section-label">04 — Training &amp; Certificates</p>
         <ul className="training-list">
           {training.map((t, i) => (
