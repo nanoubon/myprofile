@@ -1,22 +1,23 @@
 :root {
-  --bg: #f4f7fb;
-  --bg-deep: #e8eef6;
+  --bg: #f2f6fc;
+  --bg-deep: #e3ecf7;
   --surface: #ffffff;
-  --ink: #1a2332;
-  --ink-soft: #3d4a5c;
-  --muted: #6b7a8d;
-  --accent: #0d7a6f;
-  --accent-hover: #0a6158;
-  --accent-soft: #e4f4f1;
-  --accent-line: #b8ddd7;
-  --line: #d5dee8;
-  --shadow: 0 12px 40px rgba(26, 35, 50, 0.06);
-  --shadow-hover: 0 18px 48px rgba(26, 35, 50, 0.1);
+  --ink: #152238;
+  --ink-soft: #3a4d66;
+  --muted: #6a7d94;
+  --accent: #1e6fb8;
+  --accent-hover: #175a96;
+  --accent-soft: #e6f0fa;
+  --accent-line: #a9c8e6;
+  --accent-mid: #5b9fd4;
+  --line: #d3dde9;
+  --shadow: 0 12px 40px rgba(21, 34, 56, 0.06);
+  --shadow-hover: 0 18px 48px rgba(21, 34, 56, 0.1);
   --radius: 14px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'IBM Plex Sans', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Kanit', sans-serif;
+  --font-body: 'Kanit', sans-serif;
+  --font-mono: 'Kanit', sans-serif;
 }
 
 * {
@@ -72,7 +73,7 @@ button:focus-visible {
 .orb-1 {
   width: 480px;
   height: 480px;
-  background: radial-gradient(circle, #c8e8e3 0%, transparent 70%);
+  background: radial-gradient(circle, #b9d6f2 0%, transparent 70%);
   top: -12%;
   left: -8%;
 }
@@ -80,7 +81,7 @@ button:focus-visible {
 .orb-2 {
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, #c5d8f0 0%, transparent 70%);
+  background: radial-gradient(circle, #c5daf0 0%, transparent 70%);
   top: 35%;
   right: -10%;
   animation-delay: -8s;
@@ -90,7 +91,7 @@ button:focus-visible {
 .orb-3 {
   width: 360px;
   height: 360px;
-  background: radial-gradient(circle, #dde8f5 0%, transparent 70%);
+  background: radial-gradient(circle, #d6e6f7 0%, transparent 70%);
   bottom: -8%;
   left: 28%;
   animation-delay: -14s;
@@ -100,7 +101,7 @@ button:focus-visible {
 .orb-4 {
   width: 280px;
   height: 280px;
-  background: radial-gradient(circle, #d4efe9 0%, transparent 70%);
+  background: radial-gradient(circle, #aecceb 0%, transparent 70%);
   top: 55%;
   left: -6%;
   animation-delay: -4s;
@@ -236,7 +237,7 @@ button:focus-visible {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), #5bb8ad, transparent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-mid), transparent);
   transform-origin: left;
   animation: drawLine 1s var(--ease) 0.3s both;
 }
@@ -265,7 +266,7 @@ button:focus-visible {
   border: 3px solid var(--surface);
   box-shadow:
     0 0 0 2px var(--accent-line),
-    0 10px 28px rgba(13, 122, 111, 0.15);
+    0 10px 28px rgba(30, 111, 184, 0.18);
   transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
 }
 
@@ -273,7 +274,7 @@ button:focus-visible {
   transform: scale(1.04);
   box-shadow:
     0 0 0 3px var(--accent),
-    0 14px 32px rgba(13, 122, 111, 0.2);
+    0 14px 32px rgba(30, 111, 184, 0.25);
 }
 
 .hero-avatar img {
@@ -287,7 +288,7 @@ button:focus-visible {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(13, 122, 111, 0.08), transparent 55%);
+  background: linear-gradient(160deg, rgba(30, 111, 184, 0.1), transparent 55%);
   pointer-events: none;
 }
 
@@ -741,7 +742,7 @@ button:focus-visible {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent), #5bb8ad);
+  background: linear-gradient(90deg, var(--accent), var(--accent-mid));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s var(--ease);
