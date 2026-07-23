@@ -16,13 +16,6 @@ const jobs = [
       'Collaborate with engineering, product, and data teams to integrate models into services, APIs, and applications',
       'Perform root-cause analysis and debug production incidents that affect model output',
       'Ensure data quality and apply data-governance rules throughout model development',
-      'Designed and implemented web applications using React, Next.js, Python, Flutter and C# .NET Core (API & Razor Pages)',
-      'Developed responsive UIs with HTML5, Bootstrap, and Tailwind CSS with mobile-first approach',
-      'Built and managed CI/CD pipelines using GitLab and GitLab Runner for automated workflows',
-      'Containerized applications and microservices with Docker for consistent deployments',
-      'Integrated SonarQube for static code analysis and technical debt tracking',
-      'Created dynamic business reports using RDL (Report Definition Language)',
-      'Collaborated in cross-functional Agile teams to resolve technical issues and reduce latency',
       'Contribute to code reviews and knowledge-sharing activities',
       'Communicate technical results, limitations, and trade-offs to non-technical stakeholders',
       'Package models with all required artefacts and documentation for seamless deployment',
@@ -82,7 +75,7 @@ function Timeline() {
       <div className="timeline">
         {jobs.map((job, index) => (
           <div
-            key={index}
+            key={`${job.company}-${job.year}`}
             className={`timeline-card delay-${Math.min(index + 1, 5)}`}
             data-reveal="left"
           >

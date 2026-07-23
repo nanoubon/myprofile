@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 /** Adds `.is-visible` when elements with `[data-reveal]` enter the viewport. */
 export function useReveal() {
   useEffect(() => {
-    const nodes = document.querySelectorAll<HTMLElement>('[data-reveal]')
+    const nodes = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'))
     if (!nodes.length) return
 
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -14,17 +14,16 @@ export function useReveal() {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
-            observer.unobserve(entry.target)
-          }
-        })
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        }
       },
       { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
     )
 
-    nodes.forEach((el) => observer.observe(el))
+    for (const el of nodes) observer.observe(el)
     return () => observer.disconnect()
   }, [])
 }

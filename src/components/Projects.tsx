@@ -36,7 +36,7 @@ function Projects() {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div
-            key={index}
+            key={project.name}
             className={`project-card-3d delay-${Math.min(index + 1, 5)}`}
             data-reveal="scale"
           >

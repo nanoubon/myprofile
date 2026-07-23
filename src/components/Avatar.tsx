@@ -5,7 +5,7 @@ const person = {
   phone: '065-4956198',
   email: 'programmer_ubon@hotmail.com',
   tags: ['React', 'Next.js', 'Python', 'C# .NET Core', 'Docker', 'CI/CD'],
-  imageUrl: '/myprofile/Picture1.jpg',
+  imageUrl: `${import.meta.env.BASE_URL}Picture1.jpg`,
   personalData: [
     { label: 'Nationality', value: 'Thai' },
     { label: 'Status', value: 'Married' },
